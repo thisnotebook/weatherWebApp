@@ -1,0 +1,234 @@
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+:root{
+    --colorDark1:#112D4E;
+    --colorDark2:#3F72AF;
+    --colorLight1:#DBE2EF;
+    --colorLight2:#F9F7F7;
+}
+
+.wrapper{
+    width:100vW;
+    height: 100vh;
+    color: var(--colorLight2);
+    background-image: linear-gradient(160deg, #112d4e 0%, #3f72af 100%);
+}
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 20px;
+}
+.tab-container{
+      width: 90%;
+  max-width: 550px;
+    margin: 0 auto;
+    margin-top: 1.5rem;
+    display: flex;
+    /* justify-content:space-evenly ; */
+    justify-content: space-between;
+
+}
+.tab{
+    cursor: pointer;
+    font-size: 0.875rem;
+     letter-spacing: 1.75px;
+     padding: 5px 8px;
+}
+.tab.current-tab{
+    background-color: rgba(219,226,239,0.5);
+    border-radius: 4px;
+}
+/* .weather-container{
+    display:  flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-block: 2rem;
+} */
+.btn{
+    all: unset;/*to remove default functionality , properties */
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-color: var(--colorDark2);
+    cursor: pointer;
+    padding: 10px 30px;
+}
+/*-----grant access-----*/
+
+/*general grant location look like*/
+.sub-container{
+    /*this class is common class use in grant-location-container, loading-container*/
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+}
+.grant-location-container{
+    display: none;
+     /* //hide the content */
+}
+/*when no grant given by user */
+.grant-location-container.active{
+    display: flex;
+}
+ /*jab ue active tak dikhana h toh flex*/
+.grant-location-container img{
+    margin-bottom: 1.5rem;
+}
+.grant-location-container p:first-of-type{
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 0;
+    text-align: center;
+}
+.grant-location-container p:last-of-type{
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-top: 0.65rem;
+    margin-bottom: 1.75rem;
+    letter-spacing: 0.75px;
+    text-align: center;
+}
+/*-----grant access-----*/
+/*-----loading css-----*/
+.loading-containers{
+    display: none;
+}
+.loading-containers.active{
+    display: flex;
+}
+.loading-containers p{
+    text-transform: uppercase;
+}
+/*-----loading css-----*/
+
+/*-----user-info-containers-----*/
+
+.user-info-containers{
+    display: none;
+}
+
+.user-info-containers.active{
+     display: flex; 
+}
+.name{
+    display: flex;
+    align-items: center;
+    gap: 0 0.5rem;
+    margin-bottom: 1rem;
+}
+.user-info-containers p{
+    font-size: 1.5rem;
+    font-weight: 200;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.user-info-containers img{
+    width: 80px;
+    height: 80px;
+   
+}
+.name p{
+    font-size: 1.5rem;
+}
+.name img{
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+.user-info-containers p[data-temp]{
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+/*-----user-info-containers-----*/
+
+/*-----parameter-container-----*/
+
+.parameter-container{
+    display: flex;
+    gap: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.parameter{
+    width: 30%;
+    max-width: 200px;
+    background-color: rgba(219, 226, 239,0.5);
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px 0;
+    align-items: center;
+    
+}
+
+.parameter img{
+    width: 50px;
+    height: 50px;
+}
+.parameter p:first-of-type{
+    font-size: 1.15rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.parameter p:last-of-type{
+    font-size: 1rem;
+    font-weight: 200;
+   
+}
+/*-----parameter-container-----*/
+
+/*-----form container-----*/
+.form-containers{
+    display: none;
+ 
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    gap: 0 10px;
+    margin-bottom: 2rem;
+ 
+}
+.form-containers.active{
+    display: flex;
+}
+
+.form-containers input{
+    /* all: unset; */
+    width: calc(100% - 80px);
+    height: 40px;
+    padding: 0 20px;
+    background-color: rgba(219,226,239,0.5);
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+.form-containers input::placeholder{
+   color: rgba(219,226,239,0.5);
+}
+
+.form-containers input:focus{
+   outline: 3px solid rgba(255,255,255,0.7);
+}
+.form-containers .btn{
+    padding: unset;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+   
+}

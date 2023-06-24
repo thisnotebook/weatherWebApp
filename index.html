@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+      integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+      crossorigin="anonymous"
+    ></script>
+    <!--font awesome resourse link-->
+  
+    <script src="https://kit.fontawesome.com/a5486fc9da.js" crossorigin="anonymous"></script>
+ 
+    <!--google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap" rel="stylesheet">
+<!-- linking local css files -->
+    <link rel="stylesheet" href="style.css" /> 
+    <!-- <link  href="script.js" /> -->
+  </head>
+  <body>
+ 
+   <div class="wrapper">
+    <h1>WEATHER APP</h1>
+    <div class="tab-container">
+        <p class="tab" data-userweather>Your Weather</p>
+        <p class="tab" data-searchweather>Search Weather</p>
+    </div>
+
+     <div class="weather-container"> 
+        <!-- grant location container -->
+        <div class="sub-container grant-location-container">
+            <img src="assets/location_image.png" width="80" height="80" loading="lazy">
+            <p>Grant Location Access</p>
+            <p>Allow Access to get weather Information</p>
+             <button class="btn" data-grantaccesss>GRANT ACCESS</button> 
+        </div>
+
+        <!-- search form -->
+         <form class="form-containers" data-searchForm>
+            <input placeholder="Search for city.." data-searchInput style="color:rgba(255,255,255,0.7)" >
+            <button class="btn" type="submit">
+                <!-- <i class="fa-regular fa-magnifying-glass" width="20" height="20" loading ="lazy"></i> -->
+                <!-- <i class="fa-solid fa-magnifying-glass" z-index="1" loading ="lazy"></i> -->
+          <img src="assets/search.png" width="20" height="20" loading="lazy" >
+              </button>
+         </form> 
+
+         <!-- loading screen container-->
+         <div class="sub-container loading-containers">
+            <img src="assets/ZKZx (1).gif" width="80" height="80">
+            <p>Loading</p>
+         </div>
+
+         <!-- show weather info-->
+         <div class="sub-container user-info-containers">
+            <!--city name and flag-->
+            <div class="name">
+                <p data-cityname></p>
+                <img data-countryicon>
+            </div>
+            <!--weather description-->
+            <p data-weatherdesc></p>
+            <!--weather icon-->
+            <img data-weathericon>
+            <!--temperature-->
+            <p data-temp></p>
+            <!-- 1-3 cards - parameter-->
+            <div class="parameter-container">
+                <!--card-1-->
+                <div class="parameter">
+                    <img src="assets/wind.png" width="80" height="80">
+                    <p>windspeed</p>
+                    <p data-windspeed></p>
+                </div>
+                <!--card-2-->
+                <div class="parameter">
+                    <img src="assets/humidity.png"width="80" height="80">
+                    <p>humidity</p>
+                    <p data-humidity></p>
+                </div>
+                <!--card-3-->
+                <div class="parameter">
+                    <img src="assets/cloudy.png"width="80" height="80">
+                    <p>clouds</p>
+                    <p data-cloudiness></p>
+                </div>
+            </div>
+         </div>
+
+     </div>
+
+   </div>
+   
+
+    <script src="script.js" charset="UTF-8"></script>
+  </body>
+</html>
